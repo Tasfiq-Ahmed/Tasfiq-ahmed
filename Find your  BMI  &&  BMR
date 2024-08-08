@@ -1,0 +1,104 @@
+#include <iostream>
+#include <conio.h>
+
+int main()
+{
+
+	int choice, choices , male , female;
+	float BMI, BMR, height, weight, ojon, ocotha, year;
+	
+	
+
+	printf("What you want to be a calculate:\n ");
+	printf("1. BMI \n ");
+	printf("2.BMR \n");
+	printf("Enter your Choice :  ");
+	scanf("%d",& choice);
+
+
+	if (choice== 1) {
+
+		printf("Enter your Height (meter ): ");
+		scanf("%f", &height);
+
+
+
+		printf("Enter your Weight (kg ): ");
+		scanf("%f", &weight);
+
+		BMI = weight / ( height* height );
+
+		printf("Your BMI is = %.2f \n\n", BMI );
+
+		if( BMI> 18.00 && BMR <24.00) {
+			printf("you are a Healthy person\n");
+
+		}
+
+
+		else {
+			printf("your are a Not a Wealthy person");
+		}
+
+	}
+
+
+
+	if (choice== 2) {
+
+		printf("Whats your Gender\n");
+		printf("1. Male \n");
+		printf("2. Female\n");
+
+		printf("Enter your Choices: ");
+		scanf("%d",&choices);
+
+		if(choices==1 ) {
+
+			printf("Enter Your OJON : ");
+			scanf("%f", &ojon);
+
+
+			printf("Enter Your OCOTHA : ");
+			scanf("%f", &ocotha);
+
+			printf("Enter Your YEAR : ");
+			scanf("%f", &year);
+
+			BMR = 66 + (13.7 * ojon) + (5 * ocotha) - (6.8 * year);
+
+
+			printf("Your BMR is = %2.f", BMR);
+
+		}
+
+
+		if(choices==2 ) {
+
+			printf("Enter Your OJON : ");
+			scanf("%f", &ojon);
+
+
+			printf("Enter Your OCOTHA : ");
+			scanf("%f", &ocotha);
+
+			printf("Enter Your YEAR : ");
+			scanf("%f", &year);
+
+			BMR = 665 + (9.6 * ojon) + (1.8 * ocotha) - (4.7 * year);
+
+
+			printf("Your BMR is = %2.f", BMR);
+
+		}
+
+
+
+
+
+	}
+
+
+
+	return 0;
+}
