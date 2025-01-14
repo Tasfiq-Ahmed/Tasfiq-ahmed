@@ -1,0 +1,103 @@
+// when you click "learn more" button  a display will be  show on this page and when you click croos( X ) display will be close/hide.// 
+
+
+
+
+
+================//Html File //============
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>Navbar</h1>
+
+    <button id="btn">Learn More </button>
+
+    <div id="content" class="content">
+
+        <i style="float: right; padding: 15px 0;" id="close" class="fa-regular fa-x"></i>
+
+        <h1 style="color: beige; text-align: center;">Learn more about me
+        </h1>
+        <h2 style="font-weight: bold;">Developer and Programmer</h2>
+        <p>Since I was a child I get attracted by world of computing, researching and learning on my own everything I
+            can. Since first time I use a computer or
+            the day I disassembled one and put it together again, to early 2022, when I decided to fully dedicate myself
+            to learn to programming, taking my first steps with the
+            language that most attracted me at that time: <span style="color: blue;">Python.</span> </p>
+
+        <p>Once learned the bases of Python in a self-taught way, in order to increase my knowledge and skills, I faced
+            a project in which I began the
+            development of a management software for a local company. After five months, the first beta version has been
+            presented to them, and at this
+
+
+            moment, it is in a trial period looking for possible bugs.</p>
+
+        <p>The software consists in an extremely simple and intuitive GUI, which is shown on Windows console. Beyond
+            this simplicity, it has a very robust
+            functionality, allowing the company to satisfy every need: from payments, cash movement registration,
+            account statement and communication with clients,
+            working with a large database hosted on<span style="color: blue;">PostgreSQL.</span>
+            server.</p>
+
+        <p>At this moment I am working on development for the GUI version, making use of newly learned skills to achieve
+            improvement, not only in graphics but also
+            in performance and functionality. Taking advantage of object-oriented programming, code reuse writting and
+            upgrading user interface using PySide6 library.</p>
+
+    </div>
+
+
+</body>
+
+</html>
+
+
+
+ ==============//CSS File //=============
+ 
+ .content {
+            background-color: rgb(158, 135, 225);
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 900px;
+            height: 580px;
+            font-size: 18px;
+            text-align: justify;
+            display: none;
+            border-radius: 10px;
+        }
+
+        p {
+            font-style: italic;
+            font-weight: 700;
+            line-height: 23px;
+        }
+
+............. //JavaScript File // ...............
+        
+ const btn = document.getElementById("btn");
+          const content = document.getElementById("content");
+          const close = document.getElementById("close");
+      
+          btn.addEventListener("click", function(){
+              content.style.display = "block"
+          })
+         
+          close.addEventListener("click", function(){
+              content.style.display = "none"
+          })
