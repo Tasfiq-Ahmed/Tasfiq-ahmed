@@ -1,0 +1,70 @@
+
+// HTML code ...
+
+
+
+    <h1 style="text-align: center;">BMI counter </h1>
+   
+    <input id="weight" placeholder="weigth(kg)">
+    <input id="height" placeholder="height(m)">
+
+    <button id="btn">Count </button>
+    <input id="result" placeholder="result">
+    
+    <p>output :  <span id="out" style="font-weight: bold;"> </span></p>
+    <p id="advice"  style="font-weight: bold;"></p>
+
+
+  
+        
+        //JavaScript Code 
+
+
+      
+        const btn = document.getElementById("btn");
+        const result = document.getElementById("result");
+        const out = document.getElementById("out");
+
+        
+        btn.addEventListener("click", function (){
+            const weight = parseFloat(document.getElementById("weight").value);
+            const height = parseFloat(document.getElementById("height").value);
+           
+
+        const BMI = weight / (height * height);
+
+        document.getElementById("result").value = BMI.toFixed(2);
+
+        if(BMI < 18.50 ){
+           out.textContent = "you are no fit.";
+           out.style.color = "blue";
+            
+        } else if ( BMI > 18.5 && BMI < 24.99) {
+                out.textContent = "You have a normal weight .";
+                out.style.color = "green";
+
+            }else if(BMI > 25.00 && BMI < 29.99 ){
+                out.textContent = "You are overweight .";
+                out.style.color = "orange";
+
+            }else if(BMI > 30.00 && BMI < 34.99  ){
+                out.textContent = "You are overweight (Class I obesity) .";
+                out.style.color = "red";
+                advice.textContent = " Advise : Consider a balanced diet and regular exercise to manage your weight.";
+
+            }else if(BMI > 35.00 && BMI < 39.99 ){
+                out.textContent = "You are overweight (Class II obesity) .";
+                out.style.color = "red";
+                advice.textContent = "  Advise : It is recommended to consult a doctor for a proper weight management plan.";
+
+            }else if (BMI >= 40.00) {
+                out.textContent = "You have Class III obesity (severe obesity).";
+                out.style.color = "darkred";
+                advice.textContent = "  Advise : Immediate medical consultation is advised to reduce health risks.";
+            }
+
+        });
+
+       
+
+   
