@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1 style="text-align: center;">Add Two Number </h1> <br>
+    <input id="num1" type="number" >
+    <input id="num2" type="number" >
+    <button id="add">Add</button>
+    <input  id="result" disabled value="000" placeholder="result">
+
+    <script>
+
+        const add = document.getElementById("add");
+        const result = document.getElementById("result");
+
+        add.addEventListener("click", function(){
+            const num1 = parseFloat(document.getElementById("num1").value);
+            const num2 = parseFloat(document.getElementById("num2").value);
+
+            const sum = num1 + num2;
+            result.value = sum;
+
+        })
+
+
+    </script>
+
+   
+</body>
+</html>
